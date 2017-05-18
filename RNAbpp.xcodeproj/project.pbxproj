@@ -25,6 +25,14 @@
 /* Begin PBXFileReference section */
 		0E2ECE8E1ECD8E2E0057D64F /* RNAbpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RNAbpp; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E2ECE911ECD8E2E0057D64F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0E2ECE981ECD8EDF0057D64F /* energy_model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = energy_model.hpp; sourceTree = "<group>"; };
+		0E2ECE991ECD8EE40057D64F /* energy_param.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = energy_param.hpp; sourceTree = "<group>"; };
+		0E2ECE9A1ECD8EF00057D64F /* bio_sequence.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = bio_sequence.hpp; sourceTree = "<group>"; };
+		0E2ECE9B1ECD8F070057D64F /* util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = util.hpp; sourceTree = "<group>"; };
+		0E2ECE9C1ECD8F300057D64F /* application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = application.hpp; sourceTree = "<group>"; };
+		0E2ECE9D1ECD94280057D64F /* opt_parser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = opt_parser.hpp; sourceTree = "<group>"; };
+		0E2ECE9E1ECDA9CC0057D64F /* rna_andronescu2007.par */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rna_andronescu2007.par; sourceTree = "<group>"; };
+		0E2ECE9F1ECDA9CC0057D64F /* rna_turner2004.par */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rna_turner2004.par; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,14 @@
 			isa = PBXGroup;
 			children = (
 				0E2ECE911ECD8E2E0057D64F /* main.cpp */,
+				0E2ECE981ECD8EDF0057D64F /* energy_model.hpp */,
+				0E2ECE9D1ECD94280057D64F /* opt_parser.hpp */,
+				0E2ECE991ECD8EE40057D64F /* energy_param.hpp */,
+				0E2ECE9A1ECD8EF00057D64F /* bio_sequence.hpp */,
+				0E2ECE9C1ECD8F300057D64F /* application.hpp */,
+				0E2ECE9B1ECD8F070057D64F /* util.hpp */,
+				0E2ECE9E1ECDA9CC0057D64F /* rna_andronescu2007.par */,
+				0E2ECE9F1ECDA9CC0057D64F /* rna_turner2004.par */,
 			);
 			path = RNAbpp;
 			sourceTree = "<group>";
@@ -248,6 +264,7 @@
 				0E2ECE971ECD8E2E0057D64F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
