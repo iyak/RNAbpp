@@ -24,6 +24,7 @@ namespace iyak {
     int max_span = 0;
     string energy_file;
     int format = 0;
+    double gt = 0.;
 
     enum {
       FORMAT_NONE = 0,
@@ -73,6 +74,13 @@ namespace iyak {
       .dest("log")
       .action("store_true");
 
+      _parser
+      .add_option("-g", "--gt")
+      .help("Report only greater than")
+      .dest("gt")
+      .set_default(0)
+      .metavar("DOUBLE");
+
       auto const options = _parser.parse_args(argc, argv);
       auto const args = _parser.args();
 
@@ -83,6 +91,8 @@ namespace iyak {
       if ((bool)options.get("python")) format |= FORMAT_PYTHON;
       if ((bool)options.get("sqrt"))   format |= FORMAT_SQRT;
       if ((bool)options.get("log"))    format |= FORMAT_LOG;
+
+      gt = options.get("gt");
     }
   };
 }

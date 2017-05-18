@@ -64,7 +64,8 @@ int main(int const argc, char const* argv[]) {
     else {
       for (int i=0; i<size(app.seq); ++i) {
         for (int j=0; j<size(app.seq); ++j) {
-          dat0(i,j,pr(app.format, e.lnBPP(i,j)));
+          if (app.gt < exp(e.lnBPP(i,j)))
+            dat0(i,j,pr(app.format, e.lnBPP(i,j)));
         }
       }
     }
