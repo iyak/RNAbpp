@@ -14,7 +14,7 @@ $ bpp -s CGUACGUAGC
 
 Following will show the same results with what RNAfold reports (and kindly wraps in dot.ps) except for the index origin.
 ```
-build/bpp -s CGUACGUUAGCAGCCUAGCUG -q -g 1e-6 | wc
+build/bpp -s CGUACGUUAGCAGCCUAGCUG -q -g 1e-6
 ```
 
 Other options are also available. 
