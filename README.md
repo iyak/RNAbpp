@@ -12,9 +12,9 @@ $ bpp -s CGUACGUAGC
 4 9 0.00090769337836225266
 ```
 
-Following will show the same results with what RNAfold reports (and kindly wraps in dot.ps) except for the index origin.
+Following will report the same results with what RNAfold reports (and kindly wraps in dot.ps) except for the index origin.
 ```
-build/bpp -s CGUACGUUAGCAGCCUAGCUG -q -g 1e-6
+bpp -s CGUACGUUAGCAGCCUAGCUG -q -g 1e-6
 ```
 
 Other options are also available. 
