@@ -48,22 +48,16 @@ int main(int const argc, char const* argv[]) {
 
     cout.precision(17);
     if (app.format&App::FORMAT_PYTHON) {
-      cout << "[";
-      for (int i=0; i<size(app.seq); ++i) {
-        cout << "[";
-        for (int j=1; j<=size(app.seq); ++j) {
-          cout << pr(app.format, e.lnBPP(i,j));
-          if (j<size(app.seq)) cout << ",";
-        }
-        cout << "]";
-        if (i<size(app.seq)-1) cout << ",";
-      }
-      cout << "]\n";
+      VV bpp(size(app.seq), V(size(app.seq), 0));
+      for (int i=0; i<=size(app.seq); ++i)
+        for (int j=i+1; j<=size(app.seq); ++j)
+          bpp[i][j-1]=bpp[j-1][i]=pr(app.format,e.lnBPP(i,j));
+      dat0(bpp);
     }
     
     else {
       for (int i=0; i<size(app.seq); ++i) {
-        for (int j=1; j<=size(app.seq); ++j) {
+        for (int j=i; j<=size(app.seq); ++j) {
           if (app.gt < exp(e.lnBPP(i,j)))
             dat0(i,j-1,pr(app.format, e.lnBPP(i,j)));
         }
