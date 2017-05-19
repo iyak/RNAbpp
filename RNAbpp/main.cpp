@@ -52,18 +52,16 @@ int main(int const argc, char const* argv[]) {
       for (int i=0; i<size(app.seq); ++i) {
         cout << "[";
         for (int j=1; j<=size(app.seq); ++j) {
-          cout << pr(app.format, e.lnBPP(i,j));
-          if (j<size(app.seq)) cout << ",";
+          cout << pr(app.format, e.lnBPP(i,j)) << ",";
         }
-        cout << "]";
-        if (i<size(app.seq)-1) cout << ",";
+        cout << "],";
       }
       cout << "]\n";
     }
     
     else {
       for (int i=0; i<size(app.seq); ++i) {
-        for (int j=1; j<=size(app.seq); ++j) {
+        for (int j=i; j<=size(app.seq); ++j) {
           if (app.gt < exp(e.lnBPP(i,j)))
             dat0(i,j-1,pr(app.format, e.lnBPP(i,j)));
         }
